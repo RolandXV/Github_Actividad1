@@ -1,0 +1,110 @@
+/* EFECTO DE FONDO RIDÍCULO */
+body {
+    background-color: #ff00ff; /* Rosa neón horrible */
+    background-image: linear-gradient(45deg, #ff00ff 25%, #00ffff 25%, #00ffff 50%, #ff00ff 50%, #ff00ff 75%, #00ffff 75%, #00ffff 100%);
+    background-size: 56.57px 56.57px; /* Rayas diagonales molestas */
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive; /* ¡La peor fuente! */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    cursor: wait; /* Cursor cargando siempre */
+}
+
+/* El Contenedor que parece un virus */
+.contenedor {
+    background-color: #0f0; /* Verde Matrix */
+    color: #ff0000; /* Rojo sangre */
+    border: 10px dashed #ffea00; /* Borde amarillo y negro de peligro */
+    padding: 30px;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 0 0 100px #ff0000;
+    animation: vibrar 0.05s infinite; /* ¡La página vibra súper rápido! */
+    position: relative;
+    max-width: 90%;
+}
+
+/* Llenar el fondo con emojis usando pseudo-elementos */
+.contenedor::before {
+    content: "🤡😱👺☠️🔥⚠️💀🤮💩👾👻🚫👽🤬";
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    font-size: 40px;
+    letter-spacing: 15px;
+    animation: girar 1s infinite linear;
+}
+
+.contenedor::after {
+    content: "🤬👽🚫👻👾💩🤮💀⚠️🔥☠️👺😱🤡";
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    font-size: 40px;
+    letter-spacing: 15px;
+    animation: girar 1s infinite linear reverse;
+}
+
+h1 {
+    font-size: 70px;
+    color: #d9534f;
+    text-decoration: underline wavy #ff0000;
+    margin-bottom: 20px;
+}
+
+/* Título con emojis extra */
+h1::before { content: "🚨⚠️🚨"; font-size: 30px; vertical-align: middle; }
+h1::after { content: "🚨⚠️🚨"; font-size: 30px; vertical-align: middle; }
+
+p {
+    font-size: 30px;
+    color: blueviolet; /* Tu color preferido, ahora se ve fatal */
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Input que te cambia los colores */
+input {
+    background: #000;
+    border: 5px solid #0f0;
+    color: #0f0; /* Letras tipo hacker */
+    padding: 15px;
+    width: 80%;
+    font-size: 25px;
+    margin: 30px 0;
+    text-align: center;
+}
+
+/* El botón más exagerado de la historia */
+button {
+    background: repeating-linear-gradient(45deg, #ff0000, #ff0000 10px, #ffea00 10px, #ffea00 20px);
+    color: blueviolet;
+    border: 10px double #00ffff;
+    padding: 30px 60px;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: wait;
+    border-radius: 100px;
+    text-transform: uppercase;
+}
+
+/* Botón con emojis */
+button::before { content: "💣👹💣"; margin-right: 15px; }
+button::after { content: "💣👹💣"; margin-left: 15px; }
+
+/* Animación para que vibre rápido */
+@keyframes vibrar {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    20% { transform: translate(-3px, -5px) rotate(-1deg); }
+    50% { transform: translate(-5px, 0px) rotate(1deg); }
+    100% { transform: translate(1px, 1px) rotate(0deg); }
+}
+
+/* Animación para que los emojis giren */
+@keyframes girar {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
